@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import '@fortawesome/fontawesome-free/css/all.css';
 
 * {
     padding: 0;
@@ -9,12 +10,17 @@
 /* header */
 
 header {
+    position: fixed;
+    box-sizing: border-box;
+    width: 100%;
     padding: 20px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-shadow: 0px 8px 10px 0px #0000003d;
     color: #379237;
+    background-color: white;
+    z-index: 999;
 }
 
 header .logo-wrap {
@@ -25,7 +31,8 @@ header .logo-wrap {
 header .logo {
     width: 40px;
     height: 40px;
-    background-color: gray;
+    background-image: url("../public/favicon.png");
+    background-size: cover;
 }
 
 header nav ul{
@@ -48,7 +55,7 @@ main {
 
 /* jumbtrone */
 .jumbtrone {
-    padding: 100px 0px;
+    padding: 150px 0px 100px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,32 +68,47 @@ main {
 
 .jumbtrone-text h2 {
     margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.jumbtrone-text p {
+    font-size: 18px;
 }
 
 .jumbtrone-image {
-    height: 300px;
-    width: 400px;
-    background-color: #379237;
+    height: 400px;
+    width: 700px;
+    background-image: url("../public/bumi.jpg");
+    background-size: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -50px 0px ;
 }
 
 /* benefit */
 .benefit {
+    background-color: #FAFFF7;;
     text-align: center;
     padding: 100px 0px;
 }
 
-.benefit h2 {
+.benefit h2, .trash h2 {
     color: #617A55;
+    font-size: 24px;
 }
 
 .benefit hr, .trash hr {
+    border: none;
     margin: 20px auto 40px auto;
     width: 200px;
+    height: 5px;
+    background-color: #9DFF51;
 }
 
 .info-group {
     margin: auto;
     width: 80%;
+    color: #6DA441;
 }
 
 .info-wrap {
@@ -97,17 +119,20 @@ main {
 }
 
 .info-wrap .number {
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
-    background-color: #379237;
+    background-color: #82CD47;
+    color: white;
 }
 
 .info-wrap p {
+    width: 90%;
     text-align: left;
+    font-size: 18;
 }
 
 .info-wrap span {
@@ -130,6 +155,8 @@ main {
     display: flex;
     align-items: center;
     text-align: left;
+    color: #617A55;
+    font-size: 18px;
 }
 
 .trash-wrap:nth-child(2) {
@@ -137,57 +164,46 @@ main {
 }
 
 .trash-wrap .trash-image {
-    height: 150px;
+    height: 120px;
     width: 350px;
     background-color: #379237;
-    border-radius: 4%;    
+    border-radius: 4%;
+    overflow: hidden;    
 }
 
+.trash-wrap .trash-image img{
+    width: 100%;
+}
+
+.trash-wrap span {
+    font-weight: bold;
+}
 
 /* footer */
 
 footer {
-    background-color: #379237;
-    color: white;
-}
-
-.footer-group {
-    padding: 20px 40px 80px 40px;
     display: flex;
     justify-content: space-between;
-    align-items:baseline;
-}
-
-footer .logo-wrap {
-    display: flex;
-    gap: 10px;
     align-items: center;
-    margin-right: 45%;
+    background-color: #379237;
+    color: white;
+    font-size: 14px;
+    padding: 20px 40px;
 }
 
 footer .logo {
     width: 40px;
     height: 40px;
-    background-color: gray;
-}
-
-.foot-nav {
-    line-height: 40px;
-}
-
-footer .foot-nav ul {
-    list-style: none;
-}
-
-footer .foot-nav ul li a {
-    text-decoration: none;
-    color: white;
+    background-image: url("../public/favicon.png");
+    background-size: cover;
 }
 
 footer .sosmed {
+    display: flex;
+    gap: 15px;
 }
 
-footer p {
-    padding: 20px 40px;
-    text-align: center;
+footer .sosmed i {
+    font-size: 24px;
+    color: white;
 }
