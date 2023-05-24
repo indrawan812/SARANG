@@ -1,6 +1,8 @@
 
 /* jumbtrone-kelolaSampah */
 
+
+
 .jumbtrone-kelolaSampah {
     padding-bottom: 100px;
     display: flex;
@@ -21,6 +23,7 @@
 
 .jumbtrone-kelolaSampah h2 {
     font-size: 24px;
+    margin-bottom: 10px;
 }
 
 .jumbtrone-kelolaSampah p {
@@ -60,4 +63,9 @@
 .info-kelolaSampah p, .info-kelolaSampah li {
     font-size: 18px;
     color: #6DA441;
+}
+
+.info-kelolaSampah .underscore {
+    text-decoration: underline;
+    font-weight: bold;
 }

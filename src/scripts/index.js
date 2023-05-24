@@ -1,6 +1,7 @@
 import 'regenerator-runtime';
 import '../styles/beranda.css';
 import '../styles/kelolaSampah.css';
+import '../styles/layanan.css';
 import App from './views/app';
 
 const app = new App({
