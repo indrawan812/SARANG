@@ -5,6 +5,8 @@ import '../styles/layanan.css';
 import App from './views/app';
 
 const app = new App({
+  button: document.querySelector('.hamburger'),
+  drawer: document.querySelector('nav'),
   content: document.querySelector('main'),
 });
 
