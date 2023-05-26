@@ -25,7 +25,12 @@ header {
     z-index: 999;
 }
 
+header .hamburger {
+    display: none;
+}
+
 header .logo-wrap {
+    align-items: center;
     display: flex;
     gap: 10px;
 }
@@ -219,4 +224,205 @@ footer .sosmed {
 footer .sosmed i {
     font-size: 24px;
     color: white;
+}
+
+
+
+
+/* responsive */
+
+@media (max-width: 768px) {
+    
+    /* header */
+
+    header .logo {
+        width: 35px;
+        height: 35px;
+    }
+    
+    header h1 {
+        font-size: 28px;
+    }
+
+    header nav ul{
+        gap: 20px;
+    }
+
+    /* main */
+    
+    main {
+        padding: 100px 40px 0px 40px;
+    }
+    
+    /* jumbtrone */
+
+    .jumbtrone {
+        padding-bottom: 0px;
+        gap: 20px;
+    }
+    
+    .jumbtrone-text h2 {
+        margin-bottom: 15px;
+        font-size: 22px;
+    }
+    
+    .jumbtrone-text p {
+        font-size: 16px;
+    }
+    
+    .jumbtrone-image {
+        width: 100%;
+        height: 380px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 0px center ;
+    }
+
+    /* benefit */
+    
+    .benefit {
+        padding: 100px 0px 0px 0px;
+    }
+
+    .benefit h2, .trash h2 {
+        font-size: 22px;
+    }
+
+    .benefit hr, .trash hr {
+        width: 160px;
+        height: 4px;
+    }
+
+    .info-wrap {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        margin-bottom: 20px;
+    }
+
+    .info-wrap .number {
+        height: 48px;
+        line-height: 48px;
+        font-size: 18px;
+    }
+
+    .info-wrap p {
+        font-size: 16;
+    }
+
+    /* trash*/
+    
+    .trash-group {
+        width: 90%;
+    }
+
+    .trash-wrap {
+        gap: 15px;
+        font-size: 16px;
+    }
+
+    .trash-wrap .trash-image {
+        height: 120px;
+        width: 400px;
+        border-radius: 4%;    
+    }
+
+    /* footer */
+    
+    footer .logo {
+        width: 35px;
+        height: 35px;
+    }
+    
+    footer .sosmed i {
+        font-size: 24px;
+        color: white;
+    }
+
+    footer p {
+        margin-left: 70px;
+        font-size: 13;
+    }
+}
+
+@media (max-width: 425px) {
+    
+    /* header */
+    
+    header {
+        padding: 20px 20px;
+        flex-direction: row; 
+    }
+
+    header :nth-child(2){
+        margin: auto;
+    }
+
+    header .hamburger {
+        display: inline-block;
+    }
+
+    header .hamburger button {
+        border: none;
+        background-color: white;
+        color: #379237;
+        font-size: 24px;
+        /* font-weight: bold; */
+
+    }
+
+    header .logo-wrap {
+        gap: 5px;
+    }
+
+    header .logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    header nav {
+        transition: 0.5s;
+        width: 150px;
+        position: absolute;
+        top: 72px;
+        left: -160px;
+        background-color: white;
+        border-bottom: 1px solid #82CD47;
+        border-right: 1px solid #82CD47;
+    }
+
+    .open {
+        left: 0px;
+    }
+
+    header nav ul {
+        gap: 0px;
+        flex-direction: column;
+        text-align: center;
+    }
+  
+    header nav ul li a{
+        padding: 10px;
+        box-sizing: border-box;
+        display: inline-block;
+        width: 100%;
+        color: #82CD47;
+        transition: 0.5s;
+    }
+
+    header nav ul li a:hover {
+        color: white;
+        background-color: #82CD47;
+    }
+
+    /* main */
+    main {
+        padding: 150px 20px 0px 20px;
+    }
+    
+
 }
