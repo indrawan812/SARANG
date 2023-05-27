@@ -6,7 +6,9 @@ const Layanan = {
                 <div class="jumbtrone-layanan-txt">
                   <h2>Melayani Pengelolaan Sampah</h2>
                   <p>Setiap langkah kecil dalam pengelolaan sampah sangat berarti. Kami siap menjadi mitra Anda dalam mengurangi, mendaur ulang, dan memanfaatkan sampah secara bertanggung jawab.</p>
-                <button>Tukar Sampah</button>
+                  <a href="#/formLogin">
+                    <button>Tukar Sampah</button>
+                  </a>
               </div>
             </div>
             <div class="info-layanan">

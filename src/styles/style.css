@@ -26,6 +26,8 @@ header {
 header .logo-wrap {
     display: flex;
     gap: 10px;
+    font-size: 32px;
+    color: antiquewhite;
 }
 
 header .logo {
