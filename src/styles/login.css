@@ -1,104 +1,141 @@
 .container-login {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    width: 800px;
-    height: 100vh;
-    border: 2.5px solid #256925;
-    border-radius: 25px;
-    margin: 50px 200px;
+  width: 800px;
+  border: 2.5px solid #256925;
+  border-radius: 25px;
+  margin: auto;
+  overflow: hidden;
+  margin-bottom: 100px;  
 }
 
 .login-card-header {
-    position: absolute;
-    width: 100%;
-    height: 41%;
-    background: linear-gradient(0deg, rgba(51, 51, 51, 0.6), rgba(51, 51, 51, 0.6)), url("../public/login-head.jpg");
-    border-radius: 25px 25px 0px 0px;
-    background-size: contain;
-    background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 260px;
+  background: linear-gradient(0deg, rgba(51, 51, 51, 0.6), rgba(51, 51, 51, 0.6)), url("../public/login-head.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .card-logo {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    width: 50%;
-    height: 42%;
-    margin: 75px 250px;
 }
 
-
 .card-logo-wrap {
-    display: flex;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-
-    background: url("../public/favicon.png");
-    background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  background: url("../public/favicon.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .login-card-header p {
-    position: absolute;
-    color: #92DD7A;
-    margin: 55px 220px;
-    font-size: 32px;
-    font-weight: bold;
+  color: #92DD7A;
+  font-size: 32px;
+  font-weight: bold;
 }
 
-
 .login-card-body {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-
-    padding: 200px 50px;
-    color: #256925;
-    margin: 100px 10px;
+  padding: 40px 20px;
+  color: #256925;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .login-card-body form {
   display: flex;
   flex-direction: column;
-  width: 100%;
   color: #256925;
+  width: 100%;
 }
 
 #loginForm a {
-    text-align: end;
-    cursor: pointer;
+  text-align: right;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
 
 #loginForm p {
-    text-align: center;
-    cursor: pointer;
+  text-align: center;
+  cursor: pointer;
 }
 
 #loginForm label {
-  font-weight: 600;
+  font-weight: bold;
 }
 
 #loginForm input {
-  position: relative;
+  box-sizing: border-box;
   border: 2px solid #256925;;
   border-radius: 10px;
   width: 100%;
   height: 40px;
   margin-bottom: 20px;
+  padding: 20px;
+}
+
+#loginForm input::placeholder {
+  color: #2569256e;
+  font-weight: bold;
 }
 
 .btn-login {
   height: 40px;
   background-color: #256925;
-  border-radius: 10px;
   font-size: 18px;
+  border-radius: 10px;
   color: white;
-  font-weight: bolder;
+  font-weight: bold;
   cursor: pointer;
   border: none;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .container-login {
+    width: 650px;
+  }
+
+  .card-logo-wrap {
+    width: 80px;
+    height: 80px;
+  }
+
+  .login-card-header {
+    height: 200px;
+  }
+  
+  .login-card-header p {
+    color: #92DD7A;
+    font-size: 32px;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 425px){
+  .container-login {
+    width: 340px;
+  }
+
+  .login-card-header {
+    height: 160px;
+  }
+
+  .card-logo-wrap {
+    width: 60px;
+    height: 60px;
+  }
+
+  
+  
+  .login-card-header p {
+    color: #92DD7A;
+    font-size: 30px;
+    font-weight: bold;
+  }
 }

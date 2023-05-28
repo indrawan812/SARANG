@@ -55,6 +55,11 @@ header nav ul li a{
     font-size: 16px;
 }
 
+header nav ul li a:focus {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
 /* main */
 main {
     padding: 150px 80px 0px 80px;
@@ -165,6 +170,7 @@ main {
     text-align: left;
     color: #617A55;
     font-size: 18px;
+    margin-bottom: 20px;
 }
 
 .trash-wrap:nth-child(2) {
@@ -245,7 +251,12 @@ footer .sosmed i {
     }
 
     header nav ul{
+        font: 10px;
         gap: 20px;
+    }
+
+    header nav ul li a {
+        font-size: 14px;
     }
 
     /* main */
@@ -388,7 +399,7 @@ footer .sosmed i {
         transition: 0.5s;
         width: 150px;
         position: absolute;
-        top: 72px;
+        top: 74px;
         left: -160px;
         background-color: white;
         border-bottom: 1px solid #82CD47;
@@ -400,18 +411,29 @@ footer .sosmed i {
     }
 
     header nav ul {
+        width: 100%;
         gap: 0px;
         flex-direction: column;
         text-align: center;
     }
-  
+    
+    header nav ul li {
+        width: 100%;
+    }
+
     header nav ul li a{
         padding: 10px;
         box-sizing: border-box;
         display: inline-block;
         width: 100%;
         color: #82CD47;
-        transition: 0.5s;
+        transition: 0.3s;
+    }
+
+    
+    header nav ul li a:focus {
+        text-decoration: none;
+        font-weight: normal;
     }
 
     header nav ul li a:hover {
@@ -420,9 +442,105 @@ footer .sosmed i {
     }
 
     /* main */
+
     main {
-        padding: 150px 20px 0px 20px;
+        padding: 120px 40px 0px 40px;
+    }
+
+    /* jumbtrone */
+
+    .jumbtrone {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+
+    .jumbtrone-text h2 {
+        margin-bottom: 7px;
+        font-size: 20px;
+    }
+
+    .jumbtrone-text p {
+        font-size: 14px;
+    }
+
+    .jumbtrone-image {
+        height: 280px;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: -35px 0px ;
+    }
+
+    /* benefit */
+
+    .benefit h2, .trash h2 {
+        font-size: 20px;
+    }
+
+    .benefit hr, .trash hr {
+        width: 130px;
+        height: 3px;
+    }
+
+    .info-wrap {
+        gap: 15px;
+        margin-bottom: 18px;
+    }
+
+    .info-wrap .number {
+        height: 35px;
+        width: 40px;
+        line-height: 35px;
+        font-size: 14px;
+    }
+
+    .info-wrap p {
+        font-size: 13px;
     }
     
+    /* trash*/
 
+    .trash-group {
+        width: 100%;
+    }
+
+    .trash-wrap {
+        gap: 10px;
+        flex-direction: column;
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .trash-wrap:nth-child(2) {
+        text-align: left;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+
+    .trash-wrap .trash-image {
+        width: 350px;
+    }
+
+    /* footer */
+
+    footer {
+        font-size: 10px;
+        padding: 20px 20px;
+    }
+
+    footer .logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    footer .sosmed {
+        gap: 10px;
+    }
+
+    footer .sosmed i {
+        font-size: 20px;
+    }
 }

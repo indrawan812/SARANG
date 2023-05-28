@@ -50,6 +50,7 @@
     top: 6px;
     box-shadow: none;
 }
+
 /* info-layanan */
 
 .info-layanan {
@@ -109,4 +110,152 @@
 
 .trash-example :nth-child(4){
     background-image: url("../public/sampah_beling.png");    
+}
+
+@media (max-width: 768px) {
+    
+    /* jumbtrone-layanan */
+
+    .jumbtrone-layanan {
+        padding-top: 70px;
+        padding-bottom: 0px;
+    }
+
+    .jumbtrone-layanan-txt {
+        width: 50%;
+        position: relative;
+    }
+
+    .jumbtrone-layanan-image {
+        width: 500px;
+        height: 300px;
+    }
+
+    .jumbtrone-layanan h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .jumbtrone-layanan p {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .jumbtrone-layanan-txt button {
+        padding: 12px 22px;
+    }
+
+    /* info-layanan */
+
+        .info-layanan hr {
+        width: 160px;
+        height: 4px;
+    }
+
+    .info-layanan h2 {
+        font-size: 22px;
+    }
+
+    .info-layanan p {
+        font-size: 16px;
+    }
+
+    .trash-example {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .trash-example :nth-child(n){
+        width: 48%;
+        border-radius: 15px;
+        height: 200px;
+    }
+
+}
+
+@media (max-width: 425px) {
+    
+    /* jumbtrone-layanan */
+
+    .jumbtrone-layanan {
+        padding-bottom: 0px;
+        padding-top: 0px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .jumbtrone-layanan-txt {
+        position: relative;
+        width: 100%;
+    }
+    
+    .jumbtrone-layanan-image {
+        width: 100%;
+        height: 300px;
+    }
+    
+    .jumbtrone-layanan h2 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    
+    .jumbtrone-layanan p {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    
+    .jumbtrone-layanan-txt button {
+        padding: 12px 22px;
+    } 
+    
+    /* info-layanan */
+    
+    .info-layanan {
+        padding: 100px 0px;
+    }
+    
+    .info-layanan hr {
+        width: 140px;
+        height: 3px;
+    }
+    
+    .info-layanan h2 {
+        font-size: 20px;
+    }
+    
+    .info-layanan p {
+        font-size: 14px;
+    }
+    
+    .trash-example {
+        gap: 20px;
+        margin-bottom: 60px;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    
+    .trash-example :nth-child(n){
+        width: 100%;
+        border-radius: 15px;
+        height: 200px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .trash-example :nth-child(1){
+        background-image: url("../public/sampah_kertas.png");    
+    }
+    
+    .trash-example :nth-child(2){
+        background-image: url("../public/sampah_kardus.png");    
+    }
+    
+    .trash-example :nth-child(3){
+        background-image: url("../public/sampah_kaleng.png");    
+    }
+    
+    .trash-example :nth-child(4){
+        background-image: url("../public/sampah_beling.png");    
+    }
+
 }

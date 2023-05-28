@@ -8,10 +8,6 @@ class App {
     this._drawer = drawer;
     this._content = content;
 
-    console.log(this._button);
-    console.log(this._drawer);
-    console.log(this._content);
-
     this._initialAppShell();
   }
 

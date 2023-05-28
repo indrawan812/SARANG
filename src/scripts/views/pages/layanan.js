@@ -14,14 +14,14 @@ const Layanan = {
             <div class="info-layanan">
               <h2>Sampah Yang Dapat Ditukarkan</h2>
               <hr>
-              <p class="underscore">Sampah Organik</p>
+              <p class="underscore">Sampah Anorganik</p>
               <div class="trash-example">
                 <div></div>
                 <div></div>
                 <div></div>
                 <div></div>
               </div>
-              <p class="underscore">Sampah Anorganik</p>
+              <p class="underscore">Sampah Organik</p>
               <p>Campurkan sampah organik dengan air dalam wadah tertutup dan biarkan selama beberapa minggu. Saring campuran tersebut dan gunakan air hasil saringan sebagai pupuk cair untuk tanaman.</p>
             </div>
         `;

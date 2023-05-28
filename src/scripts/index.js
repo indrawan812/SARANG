@@ -3,6 +3,7 @@ import '../styles/beranda.css';
 import '../styles/kelolaSampah.css';
 import '../styles/layanan.css';
 import '../styles/login.css';
+import '../styles/tentangKami.css';
 import App from './views/app';
 
 const app = new App({
@@ -15,6 +16,6 @@ window.addEventListener('hashchange', () => {
   app.renderPage();
 });
 
-window.addEventListener('load', () => {
-  app.renderPage();
-});
+// window.addEventListener('load', () => {
+//   app.renderPage();
+// });

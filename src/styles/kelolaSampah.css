@@ -2,7 +2,6 @@
 /* jumbtrone-kelolaSampah */
 
 
-
 .jumbtrone-kelolaSampah {
     padding-bottom: 100px;
     display: flex;
@@ -68,4 +67,120 @@
 .info-kelolaSampah .underscore {
     text-decoration: underline;
     font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+    /* jumbtrone */
+
+    .jumbtrone-kelolaSampah {
+        padding-top: 50px;
+        padding-bottom: 100px;
+    }
+    
+    .jumbtrone-kelolaSampah .jumbtrone-kelolaSampah-image {
+        background-image: url("../public/truck.png");
+        width: 400px;
+        height: 260px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 4%;
+    }
+
+    .jumbtrone-kelolaSampah-txt{
+        width: 50%;
+    }
+    
+    .jumbtrone-kelolaSampah h2 {
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+    
+    .jumbtrone-kelolaSampah p {
+        font-size: 16px;
+    }
+
+    /* info-kelolaSampah */
+
+    .info-kelolaSampah hr {
+        width: 160px;
+        height: 4px;
+    }
+
+    .info-kelolaSampah h2 {
+        font-size: 22px;
+    }
+
+    .info-kelolaSampah p, .info-kelolaSampah li {
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 425px) {
+    
+    /* jumbtrone */
+
+    .jumbtrone-kelolaSampah {
+        padding-top: 20px;
+        padding-bottom: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+    
+    .jumbtrone-kelolaSampah .jumbtrone-kelolaSampah-image {
+        width: 100%;
+        height: 260px;
+    }
+    
+    .jumbtrone-kelolaSampah-txt {
+        width: 100%;
+    }
+
+    .jumbtrone-kelolaSampah h2 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    
+    .jumbtrone-kelolaSampah p {
+        font-size: 14px;
+    }
+    
+    /* info-kelolaSampah */
+    
+    .info-kelolaSampah hr {
+        border: none;
+        margin: 20px auto 40px auto;
+        width: 140px;
+        height: 3px;
+    }
+    
+    .info-kelolaSampah h2 {
+        font-size: 20px;
+    }
+    
+    .info-kelolaSampah p, .info-kelolaSampah ul {
+        margin-bottom: 10px;
+    }
+    
+    .info-kelolaSampah ul {
+        margin-left: 20px;
+    }
+    
+    .info-kelolaSampah li {
+        margin-bottom: 15px;
+    }
+
+    .info-kelolaSampah p, .info-kelolaSampah li {
+        font-size: 14px;
+        color: #6DA441;
+    }
+    
+    .info-kelolaSampah .underscore {
+        text-decoration: underline;
+        font-weight: bold;
+    }
 }
