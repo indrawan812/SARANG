@@ -45,6 +45,9 @@
     position: relative;
 }
 
+.jumbtrone-layanan-txt button:nth-child(1) {
+    margin-right: 20px;
+}
 
 .jumbtrone-layanan-txt button:active {
     top: 6px;
@@ -110,6 +113,86 @@
 
 .trash-example :nth-child(4){
     background-image: url("../public/sampah_beling.png");    
+}
+
+
+/* form-tukar */
+
+.container-form-exchange {
+    padding: 100px 0px;
+    width: 100%;
+}
+
+.form-exchange {
+    width: 80%;
+    margin: auto;
+}
+
+.form-exchange h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #617A55;
+}
+
+.form-exchange hr {
+    border: none;
+    margin: 20px auto 40px auto;
+    width: 200px;
+    height: 5px;
+    background-color: #9DFF51;
+}
+
+.form-exchange p {
+    font-weight: bold;
+    color: #617A55;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+#phone-number[type="number"]::-webkit-inner-spin-button,
+#phone-number[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form-exchange form, .left-side, .right-side {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-exchange .split-side {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-side, .right-side{
+    width: 48%;
+}
+
+form [type="submit"] {
+    background-color: #379237;
+    width: 150px;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    border: none;
+    margin-left: 84%;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+form label {
+    font-size: 18px;
+    color: #379237;
+}
+
+form input {
+    border-radius: 10px;
+    padding: 5px 10px;
+    border: 1px solid #379237;
+    margin-bottom: 10px;
 }
 
 @media (max-width: 768px) {
