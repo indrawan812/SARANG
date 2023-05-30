@@ -3,6 +3,8 @@ import '../styles/beranda.css';
 import '../styles/kelolaSampah.css';
 import '../styles/layanan.css';
 import '../styles/tentangKami.css';
+import '../styles/buktiTransaksiTukar.css';
+import '../styles/buktiTransaksiJual.css';
 import App from './views/app';
 
 const app = new App({
@@ -12,9 +14,14 @@ const app = new App({
 });
 
 window.addEventListener('hashchange', () => {
+  const urlSkip = window.location.hash;
+  if (urlSkip === '#container-form-sell' || urlSkip === '#container-form-exchange') {
+    return;
+  }
+  window.scrollTo(0, 0);
   app.renderPage();
 });
 
-// window.addEventListener('load', () => {
-//   app.renderPage();
-// });
+window.addEventListener('load', () => {
+  app.renderPage();
+});

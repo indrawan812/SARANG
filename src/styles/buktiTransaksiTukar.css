@@ -1,0 +1,81 @@
+.bukti-transaksi{
+    margin: auto;
+    border: 2px solid #379237;
+    width: 30%;
+    border-radius: 10px;
+    padding: 40px 20px;
+    margin-bottom: 100px;
+}
+
+.container-transaksi h2{
+    color: #617A55;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+.container-transaksi hr {
+    background-color: #379237;
+    border: none;
+    height: 2px;
+    margin-bottom: 10px;
+}
+
+.container-transaksi .split-side {
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+}
+
+.container-transaksi p{
+    color: #379237;
+    margin-bottom: 5px;
+}
+
+.container-transaksi p.spacing {
+    margin-bottom: 20px;
+}
+
+.container-transaksi span {
+    font-weight: bold;
+}
+
+.container-transaksi .split-side .right-side{
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+
+.container-transaksi .total {
+    padding: 0px 10px;
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #379237;
+}
+
+.container-transaksi .petunjuk {
+    padding-top: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .bukti-transaksi{
+        margin: auto;
+        width: 60%;
+    }
+}
+
+@media (max-width: 425px) {
+    .bukti-transaksi{
+        width: 90%;
+    }
+
+    .container-transaksi h2{
+        font-size: 20px;
+    }
+
+    .container-transaksi p{
+        font-size: 16px;
+    }
+}

@@ -23,6 +23,9 @@ const KelolaSampah = {
         `;
   },
 
+  async afterRender() {
+    console.log('kelola sampah');
+  },
 };
 
 export default KelolaSampah;

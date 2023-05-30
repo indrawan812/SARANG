@@ -65,6 +65,9 @@ const TentangKami = {
          `;
   },
 
+  async afterRender() {
+    console.log('tentang kami');
+  },
 };
 
 export default TentangKami;

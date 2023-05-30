@@ -118,23 +118,27 @@
 
 /* form-tukar */
 
-.container-form-exchange {
+.hide-content{
+    display: none;
+}
+
+.container-form-exchange, .container-form-sell {
     padding: 100px 0px;
     width: 100%;
 }
 
-.form-exchange {
+.form-exchange, .form-sell {
     width: 80%;
     margin: auto;
 }
 
-.form-exchange h2 {
+.form-exchange h2, .form-sell h2 {
     text-align: center;
     font-size: 24px;
     color: #617A55;
 }
 
-.form-exchange hr {
+.form-exchange hr, .form-sell hr{
     border: none;
     margin: 20px auto 40px auto;
     width: 200px;
@@ -142,7 +146,7 @@
     background-color: #9DFF51;
 }
 
-.form-exchange p {
+.form-exchange p, .form-sell p{
     font-weight: bold;
     color: #617A55;
     font-size: 20px;
@@ -155,12 +159,12 @@
   margin: 0;
 }
 
-.form-exchange form, .left-side, .right-side {
+.form-exchange form, .form-sell form, .left-side, .right-side {
     display: flex;
     flex-direction: column;
 }
 
-.form-exchange .split-side {
+.form-exchange .split-side, .form-sell .split-side{
     display: flex;
     justify-content: space-between;
 }
@@ -175,24 +179,121 @@ form [type="submit"] {
     padding: 10px;
     color: white;
     font-size: 16px;
-    border: none;
+    border: 1px solid #379237;
     margin-left: 84%;
     border-radius: 10px;
     margin-top: 10px;
     cursor: pointer;
 }
 
-
 form label {
     font-size: 18px;
     color: #379237;
 }
 
-form input {
+form input, form select{
+    font-size: 16px;
     border-radius: 10px;
     padding: 5px 10px;
     border: 1px solid #379237;
     margin-bottom: 10px;
+}
+
+form input::placeholder, form select::placeholder{
+    color: rgba(0, 0, 0, 0.404);
+}
+
+
+/* overlay */
+
+.overlay-exchange, .overlay-sell {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 9999999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+
+}
+
+.container-confirmation{
+    width: 30%;
+    border-radius: 10px;
+    background-color: white;
+    padding: 40px 20px;
+}
+
+.container-confirmation h2{
+    color: #617A55;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+.container-confirmation hr {
+    background-color: #379237;
+    border: none;
+    height: 2px;
+    margin-bottom: 10px;
+}
+
+.container-confirmation .split-side {
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+}
+
+.container-confirmation p{
+    color: #379237;
+    margin-bottom: 5px;
+}
+
+p.spacing {
+    margin-bottom: 20px;
+}
+
+.container-confirmation span {
+    font-weight: bold;
+}
+
+.container-confirmation .split-side .right-side{
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+
+.total {
+    font-size: 17px;
+    display: flex;
+    gap: 42px;
+    justify-content: end;
+}
+
+.container-confirmation button {
+    width: 100%;
+    background-color: #379237;
+    color: white;
+    border: none;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.container-confirmation #cancel-exchange, .container-confirmation #cancel-sell {
+    text-align: center;
+    display: block;
+    color: #379237;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.open {
+    display: flex;
 }
 
 @media (max-width: 768px) {
@@ -223,9 +324,14 @@ form input {
         font-size: 16px;
         margin-bottom: 10px;
     }
+    
+    .button-group {
+        display: flex;
+    }
 
     .jumbtrone-layanan-txt button {
-        padding: 12px 22px;
+        padding: 10px 20px;
+        font-size: 10px;
     }
 
     /* info-layanan */
@@ -252,6 +358,39 @@ form input {
         width: 48%;
         border-radius: 15px;
         height: 200px;
+    }
+
+    /* form-tukar */
+
+    .form-exchange h2, .form-sell h2 {
+        font-size: 22px;
+    }
+
+    .form-exchange hr, .form-sell hr{
+        height: 4px;
+    }
+
+    .form-exchange p, .form-sell p{
+        font-size: 16px;
+    }
+
+    form [type="submit"] {
+        padding: 8px;
+        margin-left: 72.5%;
+    }
+
+    form label {
+        font-size: 16px;
+    }
+
+    /* overlay */
+
+    .container-confirmation{
+        width: 52%;
+    }
+
+    .container-confirmation .split-side {
+        font-size: 16px;
     }
 
 }
@@ -341,4 +480,50 @@ form input {
         background-image: url("../public/sampah_beling.png");    
     }
 
+    /* form-tukar */
+    
+    .form-exchange, .form-sell {
+        width: 100%;
+    }
+
+    .form-exchange h2, .form-sell h2 {
+        font-size: 20px;
+    }
+
+    .form-exchange hr, .form-sell hr{
+        height: 3px;
+    }
+
+    .form-exchange p, .form-sell p{
+        font-size: 14px;
+    }
+
+    form [type="submit"] {
+        padding: 6px;
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    form label {
+        font-size: 14px;
+    }
+
+    /* overlay */
+
+    .container-confirmation{
+        width: 80%;
+    }
+
+    .container-confirmation h2{
+        font-size: 20px;
+    }
+
+    .container-confirmation .split-side {
+        font-size: 16px;
+    }
+
+    .total {
+        font-size: 16px;
+        
+    }
 }

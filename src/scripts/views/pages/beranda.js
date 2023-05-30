@@ -51,6 +51,9 @@ const Beranda = {
       `;
   },
 
+  async afterRender() {
+    console.log('beranda');
+  },
 };
 
 export default Beranda;

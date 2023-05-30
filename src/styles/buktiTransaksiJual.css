@@ -1,0 +1,80 @@
+.bukti-jual{
+    margin: auto;
+    border: 2px solid #379237;
+    width: 30%;
+    border-radius: 10px;
+    padding: 40px 20px;
+    margin-bottom: 100px;
+}
+
+.container-jual h2{
+    color: #617A55;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+.container-jual hr {
+    background-color: #379237;
+    border: none;
+    height: 2px;
+    margin-bottom: 10px;
+}
+
+.container-jual .split-side {
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+}
+
+.container-jual p{
+    color: #379237;
+    margin-bottom: 5px;
+}
+
+.container-jual p.spacing {
+    margin-bottom: 20px;
+}
+
+.container-jual span {
+    font-weight: bold;
+}
+
+.container-jual .split-side .right-side{
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+
+.container-jual .total {
+    padding: 0px 10px;
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #379237;
+}
+
+.container-jual .petunjuk {
+    padding-top: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .bukti-jual{
+        width: 60%;
+    }
+}
+
+@media (max-width: 425px) {
+    .bukti-jual{
+        width: 90%;
+    }
+
+    .container-jual h2{
+        font-size: 20px;
+    }
+
+    .container-jual p{
+        font-size: 16px;
+    }
+}

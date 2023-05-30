@@ -232,6 +232,40 @@ footer .sosmed i {
     color: white;
 }
 
+footer .logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer-info .location {
+    margin-left: 1.4px;
+    margin-bottom: 5px;
+}
+
+.footer-info .location, .footer-info .time {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-info .location i {
+    margin-right: 3px;
+    font-size: 18px;
+}
+
+.footer-info .time i {
+    font-size: 17px;
+}
+
+footer .note{
+    margin-right: 180px;
+}
 
 
 
@@ -340,19 +374,45 @@ footer .sosmed i {
 
     /* footer */
     
+    footer {
+        font-size: 12px;
+    }
+    
     footer .logo {
         width: 35px;
         height: 35px;
     }
     
-    footer .sosmed i {
-        font-size: 24px;
-        color: white;
+    footer .sosmed {
+        gap: 12px;
     }
-
-    footer p {
-        margin-left: 70px;
-        font-size: 13;
+    
+    footer .logo-wrap {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .footer-info .location {
+        margin-left: 1.4px;
+        margin-bottom: 5px;
+    }
+    
+    .footer-info .location, .footer-info .time {
+        gap: 5px;
+    }
+    
+    .footer-info .location i {
+        margin-right: 3px;
+        font-size: 15px;
+    }
+    
+    .footer-info .time i {
+        font-size: 14px;
+    }
+    
+    footer .note{
+        margin-right: 100px;
     }
 }
 
@@ -528,19 +588,50 @@ footer .sosmed i {
 
     footer {
         font-size: 10px;
-        padding: 20px 20px;
+        padding: 20px;
     }
-
+    
     footer .logo {
-        width: 30px;
-        height: 30px;
+        width: 28px;
+        height: 28px;
     }
-
+    
     footer .sosmed {
+        display: flex;
         gap: 10px;
     }
-
+    
     footer .sosmed i {
         font-size: 20px;
+    }
+    
+    footer .logo-wrap {
+        gap: 5px;
+    }
+    
+    .footer-info .location {
+        margin-left: 1.4px;
+        margin-bottom: 5px;
+    }
+    
+    .footer-info .location, .footer-info .time {
+        display: flex;
+        gap: 5px;
+        font-size: 10px;
+    }
+    
+    .footer-info .location i {
+        margin-right: 3px;
+        font-size: 14px;
+    }
+    
+    .footer-info .time i {
+        font-size: 13px;
+    }
+    
+    footer .note{
+        font-size: 10px;
+        margin-right: 0px;
+        display: none;
     }
 }
