@@ -154,10 +154,17 @@
 }
 
 #phone-number[type="number"]::-webkit-inner-spin-button,
-#phone-number[type="number"]::-webkit-outer-spin-button {
+#phone-number[type="number"]::-webkit-outer-spin-button,
+#phone-number-sell[type="number"]::-webkit-inner-spin-button,
+#phone-number-sell[type="number"]::-webkit-outer-spin-button,
+#trash-amount[type="number"]::-webkit-inner-spin-button,
+#trash-amount[type="number"]::-webkit-outer-spin-button,
+#trash-amount-sell[type="number"]::-webkit-inner-spin-button,
+#trash-amount-sell[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
 
 .form-exchange form, .form-sell form, .left-side, .right-side {
     display: flex;

@@ -61,12 +61,12 @@
 
 @media (max-width: 768px) {
     .bukti-transaksi{
-        margin: auto;
         width: 60%;
     }
 }
 
 @media (max-width: 425px) {
+
     .bukti-transaksi{
         width: 90%;
     }

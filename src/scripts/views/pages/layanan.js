@@ -1,4 +1,14 @@
 const Layanan = {
+
+  name: '',
+  addres: '',
+  phoneNumber: '',
+  trashSpecification: '',
+  amount: '',
+  price: '',
+  pupukPrice: 20000,
+  total: '',
+
   async render() {
     return `
       <div class="jumbtrone-layanan">
@@ -41,19 +51,19 @@ const Layanan = {
                         <div class="left-side">
                             <label for="trash-specification">Jenis Sampah</label>
                             <select id="trash-specification" required>
-                                <option value="kertas">Kertas</option>
-                                <option value="kardus">Kardus</option>
-                                <option value="kaleng">Kaleng</option>
-                                <option value="botol">Botol Kaca</option>
+                                <option value="Kertas">Kertas</option>
+                                <option value="Kardus">Kardus</option>
+                                <option value="Kaleng">Kaleng</option>
+                                <option value="Botol Kaca">Botol Kaca</option>
                             </select>
                             <label for="trash-amount">Jumlah Sampah (Kg)</label>
                             <input type="number" id="trash-amount" placeholder="Masukan Jumlah Sampah" required>
                         </div>
                         <div class="right-side">
                             <label >Harga Per Kilo</label>
-                            <input type="text" readonly>
+                            <input type="text" id="exchange-trash-price" value="" readonly>
                             <label >Total Harga</label>
-                            <input type="text" readonly>
+                            <input type="text value="" id="exchange-trash-total" readonly>
                         </div>
                     </div>
                     <input id="tukar" type="submit" value="Tukar">
@@ -66,22 +76,22 @@ const Layanan = {
                 <hr>
                 <p>Form Pendaftaran</p>
                 <form action="">
-                    <label for="name">Nama</label>
-                    <input type="text" id="name" placeholder="Masukan Nama" required>
-                    <label for="addres">Alamat</label>
-                    <input type="text" id="addres" placeholder="Masukan Alamat" required>
-                    <label for="phone-number">No. Telepon</label>
-                    <input type="number" id="phone-number" placeholder="Masukan Nomer Telephone" required>
+                    <label for="name-sell">Nama</label>
+                    <input type="text" id="name-sell" placeholder="Masukan Nama" required>
+                    <label for="addres-sell">Alamat</label>
+                    <input type="text" id="addres-sell" placeholder="Masukan Alamat" required>
+                    <label for="phone-number-sell">No. Telepon</label>
+                    <input type="number" id="phone-number-sell" placeholder="Masukan Nomer Telephone" required>
                     <div class="split-side">
                         <div class="left-side">
-                            <label for="trash-amount">Jumlah Pupuk (L)</label>
-                            <input type="number" id="trash-amount" placeholder="Masukan Jumlah Pupuk" required>
+                            <label for="trash-amount-sell">Jumlah Pupuk (L)</label>
+                            <input type="number" id="trash-amount-sell" placeholder="Masukan Jumlah Pupuk" required>
                         </div>
                         <div class="right-side">
                             <label >Harga Per Liter</label>
-                            <input type="text" readonly>
+                            <input type="text" value="20000" readonly>
                             <label >Total Harga</label>
-                            <input type="text" readonly>
+                            <input type="text" id="total-sell" value="" readonly>
                         </div>
                     </div>
                     <input id="jual" type="submit" value="Jual">
@@ -95,23 +105,23 @@ const Layanan = {
                 <div class="split-side">
                     <div class="left-side">
                         <span><p>Nama</p></span>
-                        <p class="spacing">Arief Rahman Hakim</p>
+                        <p class="spacing" id="overlay-name"></p>
                         <span><p>Alamat</p></span>
-                        <p class="spacing">JL.jalan</p>
+                        <p class="spacing" id="overlay-addres"></p>
                         <span><p>No. Telepon</p></span>
-                        <p class="spacing">123456789</p>
+                        <p class="spacing" id="overlay-no"></p>
                     </div>
                     <div class="right-side">
                         <span><p>Jenis Sampah</p></span>
-                        <p class="spacing">Kertas</p>
+                        <p class="spacing" id="overlay-jenis"></p>
                         <span><p>Jumlah</p></span>
-                        <p class="spacing">3 Kg</p>
+                        <p class="spacing" id="overlay-jumlah"></p>
                         <span><p>Harga Per Kilo</p></span>
-                        <p class="spacing">Rp. 2000</p>
+                        <p class="spacing" id="overlay-price"></p>
                     </div>
                 </div>
                 <div class="total">
-                <span><p>Total: </p></span><p>Rp.6000</p>
+                <span><p>Total: </p></span><p id="overlay-exchange-total"></p>
                 </div>
                 <a id="oke-exchange" href="#/bukti-transaksi-tukar"><button>Konfirmasi</button><a>
                 <a id="cancel-exchange">Batal<a> 
@@ -124,21 +134,21 @@ const Layanan = {
                 <div class="split-side">
                     <div class="left-side">
                         <span><p>Nama</p></span>
-                        <p class="spacing">Arief Rahman Hakim</p>
+                        <p class="spacing" id="overlay-name-sell"></p>
                         <span><p>Alamat</p></span>
-                        <p class="spacing">JL.jalan</p>
+                        <p class="spacing" id="overlay-addres-sell"></p>
                         <span><p>No. Telepon</p></span>
-                        <p class="spacing">123456789</p>
+                        <p class="spacing" id="overlay-no-sell"></p>
                     </div>
                     <div class="right-side">
                         <span><p>Jumlah</p></span>
-                        <p class="spacing">3 L</p>
+                        <p class="spacing" id="overlay-jumlah-sell"></p>
                         <span><p>Harga Per Liter</p></span>
-                        <p class="spacing">Rp. 2000</p>
+                        <p class="spacing">Rp.20000</p>
                     </div>
                 </div>
                 <div class="total">
-                <span><p>Total: </p></span><p>Rp.6000</p>
+                <span><p>Total: </p></span><p id="overlay-total-sell"></p>
                 </div>
                 <a id="oke-sell" href="#/bukti-transaksi-jual"><button>Konfirmasi</button><a>
                 <a id="cancel-sell">Batal<a> 
@@ -148,6 +158,11 @@ const Layanan = {
   },
 
   async afterRender() {
+    const kertasPrice = 3000;
+    const kardusPrice = 6000;
+    const kalengPrice = 3000;
+    const botolKacaPrice = 5000;
+
     const buttonExchange = document.querySelector('#button-exchange');
     const formExchange = document.querySelector('#container-form-exchange');
 
@@ -186,6 +201,141 @@ const Layanan = {
 
     cancelOverlaySell.addEventListener('click', () => {
       overlaySell.classList.remove('open');
+    });
+
+    // konfigurasi overlay exchange
+    const name = document.querySelector('#name');
+    const addres = document.querySelector('#addres');
+    const phoneNumber = document.querySelector('#phone-number');
+    const trashSpecification = document.querySelector('#trash-specification');
+    const trashAmount = document.querySelector('#trash-amount');
+    const overlayTotal = document.querySelector('#overlay-exchange-total');
+
+    name.addEventListener('input', () => {
+      const nameValue = name.value;
+      const overlayName = document.querySelector('#overlay-name');
+      overlayName.innerHTML = nameValue;
+      this.name = nameValue;
+    });
+
+    addres.addEventListener('input', () => {
+      const addresValue = addres.value;
+      const overlayAddres = document.querySelector('#overlay-addres');
+      overlayAddres.innerHTML = addresValue;
+      this.addres = addresValue;
+    });
+
+    phoneNumber.addEventListener('input', () => {
+      const phoneNumberValue = phoneNumber.value;
+      const overlayPhoneNumberValue = document.querySelector('#overlay-no');
+      overlayPhoneNumberValue.innerHTML = phoneNumberValue;
+      this.phoneNumber = phoneNumberValue;
+    });
+
+    trashSpecification.addEventListener('change', () => {
+      const trashSpecificationValue = trashSpecification.value;
+      const overlayTrashSpecificationValue = document.querySelector('#overlay-jenis');
+      overlayTrashSpecificationValue.innerHTML = trashSpecificationValue;
+      this.trashSpecification = trashSpecificationValue;
+
+      const trashPrice = document.querySelector('#overlay-price');
+      const exchangeTrashPrice = document.querySelector('#exchange-trash-price');
+
+      const trashAmountValue = trashAmount.value;
+      const exchangeTrashTotal = document.querySelector('#exchange-trash-total');
+
+      if (trashSpecificationValue === 'Kertas') {
+        trashPrice.innerHTML = `Rp.${kertasPrice}`;
+        exchangeTrashPrice.value = kertasPrice;
+        const total = trashAmountValue * kertasPrice;
+        exchangeTrashTotal.value = total;
+        overlayTotal.innerHTML = `Rp. ${total}`;
+        this.total = total;
+        this.price = kertasPrice;
+      } else if (trashSpecificationValue === 'Kardus') {
+        trashPrice.innerHTML = `Rp.${kardusPrice}`;
+        exchangeTrashPrice.value = kardusPrice;
+        const total = trashAmountValue * kardusPrice;
+        exchangeTrashTotal.value = total;
+        overlayTotal.innerHTML = `Rp. ${total}`;
+        this.total = total;
+        this.price = kardusPrice;
+      } else if (trashSpecificationValue === 'Kaleng') {
+        trashPrice.innerHTML = `Rp.${kalengPrice}`;
+        exchangeTrashPrice.value = kalengPrice;
+        const total = trashAmountValue * kalengPrice;
+        exchangeTrashTotal.value = total;
+        overlayTotal.innerHTML = `Rp. ${total}`;
+        this.total = total;
+        this.price = kalengPrice;
+      } else if (trashSpecificationValue === 'Botol Kaca') {
+        trashPrice.innerHTML = `Rp.${botolKacaPrice}`;
+        exchangeTrashPrice.value = botolKacaPrice;
+        const total = trashAmountValue * botolKacaPrice;
+        exchangeTrashTotal.value = total;
+        overlayTotal.innerHTML = `Rp. ${total}`;
+        this.total = total;
+        this.price = botolKacaPrice;
+      }
+    });
+
+    trashAmount.addEventListener('input', () => {
+      const trashAmountValue = trashAmount.value;
+
+      const overlayTrashAmountValue = document.querySelector('#overlay-jumlah');
+      overlayTrashAmountValue.innerHTML = `${trashAmountValue} Kg`;
+
+      const exchangeTrashPrice = document.querySelector('#exchange-trash-price');
+      const exchangeTrashPriceValue = exchangeTrashPrice.value;
+
+      const exchangeTrashTotal = document.querySelector('#exchange-trash-total');
+
+      const total = trashAmountValue * exchangeTrashPriceValue;
+
+      exchangeTrashTotal.value = total;
+
+      overlayTotal.innerHTML = `Rp. ${total}`;
+
+      this.amount = trashAmountValue;
+      this.total = total;
+    });
+
+    // konfigurasi overlay sell
+    const nameSell = document.querySelector('#name-sell');
+    const addresSell = document.querySelector('#addres-sell');
+    const phoneNumberSell = document.querySelector('#phone-number-sell');
+    const trashAmountSell = document.querySelector('#trash-amount-sell');
+
+    nameSell.addEventListener('input', () => {
+      const overlayNameSell = document.querySelector('#overlay-name-sell');
+      overlayNameSell.innerHTML = nameSell.value;
+      this.name = nameSell.value;
+    });
+
+    addresSell.addEventListener('input', () => {
+      const overlayAddresSell = document.querySelector('#overlay-addres-sell');
+      overlayAddresSell.innerHTML = addresSell.value;
+      this.addres = addresSell.value;
+    });
+
+    phoneNumberSell.addEventListener('input', () => {
+      const overlayPhoneNumberSell = document.querySelector('#overlay-no-sell');
+      overlayPhoneNumberSell.innerHTML = phoneNumberSell.value;
+      this.phoneNumber = phoneNumberSell.value;
+    });
+
+    trashAmountSell.addEventListener('input', () => {
+      const overlayJumlahSell = document.querySelector('#overlay-jumlah-sell');
+      overlayJumlahSell.innerHTML = `${trashAmountSell.value} L`;
+
+      const totalSell = document.querySelector('#total-sell');
+      totalSell.value = trashAmountSell.value * 20000;
+
+      const overlayTotalSell = document.querySelector('#overlay-total-sell');
+      overlayTotalSell.innerHTML = `Rp.${trashAmountSell.value * 20000}`;
+
+      this.amount = trashAmountSell.value;
+      this.total = trashAmountSell.value * 20000;
     });
   },
 };
