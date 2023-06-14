@@ -11,6 +11,10 @@
 
 /* header */
 
+#logOut {
+    display: none;
+}
+
 header {
     position: fixed;
     box-sizing: border-box;

@@ -122,6 +122,10 @@
     display: none;
 }
 
+.open-content {
+    display: inline-block;
+}
+
 .container-form-exchange, .container-form-sell {
     padding: 100px 0px;
     width: 100%;

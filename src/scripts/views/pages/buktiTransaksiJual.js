@@ -33,7 +33,7 @@ const BuktiTransaksiJual = {
   },
 
   async afterRender() {
-    console.log('BuktiTransaksiJual');
+    Layanan.resetValue();
   },
 };
 

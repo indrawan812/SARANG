@@ -5,6 +5,8 @@ import '../styles/layanan.css';
 import '../styles/tentangKami.css';
 import '../styles/buktiTransaksiTukar.css';
 import '../styles/buktiTransaksiJual.css';
+import '../styles/loginAdmin.css';
+import '../styles/admin.css';
 import App from './views/app';
 
 const app = new App({

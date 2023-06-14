@@ -1,0 +1,101 @@
+.reset-padding {
+    padding: 120px 0px 0px 0px;
+}
+
+.admin {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 160px;
+}
+
+.admin h1, .admin h2 {
+    color: #379237;
+}
+
+.sidebar {
+    width: 15%;
+}
+
+.sidebar .wrap-admin-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.sidebar .admin-logo {
+    height: 45px;
+    width: 45px;
+    background-image: url('../public/admin.png');
+    background-size: cover;
+}
+
+.sidebar hr {
+    margin: 20px auto;
+    height: 1px;
+    border: none;
+    background-color: #379237;
+    width: 90%;
+}
+
+.sidebar .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar .nav a {
+    text-decoration: none;
+    color: #379237;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.sidebar .nav a:hover {
+    font-weight: bold;
+}
+
+.container-data-exchange, .container-data-sell {
+    padding-top: 90px;
+    padding-bottom: 100px;
+    width: 100%;
+    padding-right: 40px;
+}
+
+.admin table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.admin table, th, td, tr {
+    border: 2px solid #379237;
+}
+
+.admin th, .admin td {
+    color: #379237;
+    padding: 5px;
+}
+
+.admin .delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 72, 72);
+    height: 25px;
+    width: 25px;
+    margin: auto;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid  rgb(255, 72, 72);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.admin .delete:hover {
+    border: 1px solid   rgb(255, 72, 72);
+    background-color: white;
+    color:  rgb(255, 72, 72);
+}

@@ -183,8 +183,14 @@ const Layanan = {
     const overlayExchange = document.querySelector('#overlay-exchange');
     const cancelOverlayExchange = document.querySelector('#cancel-exchange');
 
-    buttonExchangeConfirm.addEventListener('click', () => {
-      overlayExchange.classList.add('open');
+    buttonExchangeConfirm.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (this.name === '' || this.addres === '' || this.phoneNumber === '' || this.amount === '' || this.amount === '0' || this.trashSpecification === '' || this.amount === '' || this.price === '') {
+        alert('Mohon lengkapi semua inputan sebelum melanjutkan!');
+      } else {
+        // Jika semua input telah diisi
+        overlayExchange.classList.add('open');
+      }
     });
 
     cancelOverlayExchange.addEventListener('click', () => {
@@ -195,8 +201,14 @@ const Layanan = {
     const overlaySell = document.querySelector('#overlay-sell');
     const cancelOverlaySell = document.querySelector('#cancel-sell');
 
-    buttonSellConfirm.addEventListener('click', () => {
-      overlaySell.classList.add('open');
+    buttonSellConfirm.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (this.name === '' || this.addres === '' || this.phoneNumber === '' || this.amount === '' || this.amount === '0' || this.amount === '') {
+        alert('Mohon lengkapi semua inputan sebelum melanjutkan!');
+      } else {
+        // Jika semua input telah diisi
+        overlaySell.classList.add('open');
+      }
     });
 
     cancelOverlaySell.addEventListener('click', () => {
@@ -337,6 +349,70 @@ const Layanan = {
       this.amount = trashAmountSell.value;
       this.total = trashAmountSell.value * 20000;
     });
+
+    // POST data yang di inputkan ke database
+
+    // POST data Tukar Sampah
+    const okeExchange = document.querySelector('#oke-exchange');
+    okeExchange.addEventListener('click', () => {
+      const urlTukar = 'https://sarang-bckend.vercel.app/tukar-sampah';
+      const data = {
+        nama: this.name,
+        alamat: this.addres,
+        no_telp: this.phoneNumber,
+        jenis_sampah: this.trashSpecification,
+        harga_per_kilo: this.price,
+        jumlah_sampah: this.amount,
+        total_harga: this.total,
+      };
+
+      fetch(urlTukar, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+        .then((response) => response.json())
+        .then((result) => console.log(result))
+        .catch((error) => console.error(error));
+    });
+
+    // POST data Jual Pupuk
+    const okeSell = document.querySelector('#oke-sell');
+    okeSell.addEventListener('click', () => {
+      const urlJual = 'https://sarang-bckend.vercel.app/jual-pupuk';
+      const data = {
+        nama: this.name,
+        alamat: this.addres,
+        no_telp: this.phoneNumber,
+        jumlah_pupuk: this.amount,
+        harga_per_liter: this.pupukPrice,
+        total_harga: this.total,
+      };
+
+      fetch(urlJual, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+        .then((response) => response.json())
+        .then((result) => console.log(result))
+        .catch((error) => console.error(error));
+    });
+  },
+
+  // fungsi reset value
+  resetValue() {
+    this.name = '';
+    this.addres = '';
+    this.phoneNumber = '';
+    this.trashSpecification = '';
+    this.amount = '';
+    this.price = '';
+    this.total = '';
   },
 };
 

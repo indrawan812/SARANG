@@ -65,6 +65,8 @@
 
 .team-item {
     position: relative;
+    display: flex;
+    flex-direction: column;
     width: 22%;
     background-color: white;
     border-radius: 10px;
@@ -86,9 +88,10 @@
 
 
 .team-image {
+    display: flex;
+    align-self: center;
     position: absolute;
     top: 30px;
-    left: 65px;
     width: 90px;
     height: 90px;
     background-color: grey;

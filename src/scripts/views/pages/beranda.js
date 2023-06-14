@@ -1,5 +1,8 @@
 const Beranda = {
   async render() {
+    const main = document.querySelector('main');
+    main.classList.remove('reset-padding');
+
     return `
             <div class="jumbtrone">
                 <div class="jumbtrone-text">
@@ -52,7 +55,8 @@ const Beranda = {
   },
 
   async afterRender() {
-    console.log('beranda');
+    const navigasi = document.querySelector('nav');
+    navigasi.classList.remove('hide-content');
   },
 };
 

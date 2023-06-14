@@ -35,7 +35,7 @@ const BuktiTransaksiTukar = {
   },
 
   async afterRender() {
-    console.log('BuktiTransaksiTukar');
+    Layanan.resetValue();
   },
 };
 
