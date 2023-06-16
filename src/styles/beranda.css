@@ -29,7 +29,7 @@ header {
     z-index: 999;
 }
 
-header .hamburger {
+.hamburger {
     display: none;
 }
 
@@ -433,7 +433,7 @@ footer .note{
         margin: auto;
     }
 
-    header .hamburger {
+    .hamburger {
         display: inline-block;
     }
 

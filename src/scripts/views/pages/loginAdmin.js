@@ -1,6 +1,6 @@
 const LoginAdmin = {
   async render() {
-    return `
+    return `  <div class="wrap-admin">
                 <div class="login-admin">
                     <div class="login-header">
                         <div class="logo"></div>
@@ -19,11 +19,16 @@ const LoginAdmin = {
                         <p id="wrongPassName" class="hide-content">Username Dan Password Salah!</p>
                     </div>
                 </div>
+              </div>
 
           `;
   },
 
   async afterRender() {
+    // hide hamburger
+    const hamburger = document.querySelector('.hamburger');
+    hamburger.classList.add('hide-content');
+
     // hide nav
     const navigasi = document.querySelector('nav');
     navigasi.classList.add('hide-content');

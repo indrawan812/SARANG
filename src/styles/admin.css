@@ -3,9 +3,10 @@
 }
 
 .admin {
+    height: 100vh;
     display: flex;
     gap: 10px;
-    margin-bottom: 160px;
+    margin-bottom: 40px;
 }
 
 .admin h1, .admin h2 {
@@ -57,7 +58,6 @@
 
 .container-data-exchange, .container-data-sell {
     padding-top: 90px;
-    padding-bottom: 100px;
     width: 100%;
     padding-right: 40px;
 }
@@ -98,4 +98,34 @@
     border: 1px solid   rgb(255, 72, 72);
     background-color: white;
     color:  rgb(255, 72, 72);
+}
+
+@media (max-width: 1276px){
+    .admin h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1134px){
+    .admin h2 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1072px){
+    .admin h2 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1014px){
+    .admin h2 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 930px){
+    .admin h2 {
+        font-size: 12px;
+    }
 }

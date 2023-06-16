@@ -55,6 +55,12 @@ const Beranda = {
   },
 
   async afterRender() {
+    // munculkan hamburger
+    // hide hamburger
+    const hamburger = document.querySelector('.hamburger');
+    hamburger.classList.remove('hide-content');
+
+    // munculkan nav
     const navigasi = document.querySelector('nav');
     navigasi.classList.remove('hide-content');
   },

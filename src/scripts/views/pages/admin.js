@@ -55,6 +55,10 @@ const Admin = {
   },
 
   async afterRender() {
+    // hide hamburger
+    const hamburger = document.querySelector('.hamburger');
+    hamburger.classList.add('hide-content');
+
     // hide nav
     const navigasi = document.querySelector('nav');
     navigasi.classList.add('hide-content');
