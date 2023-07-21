@@ -11,14 +11,16 @@ const KelolaSampah = {
           <div class="info-kelolaSampah">
               <h2>Kelola Sampah Organik</h2>
               <hr>
-              <p class="underscore">Pupuk Kompos</p>
-              <ul>
-                  <li>Pilihlah tempat yang terpisah di halaman rumah Anda untuk mengumpulkan sampah organik seperti sisa makanan, daun kering, dan potongan tanaman</li>
-                  <li>Giling atau potong bahan organik tersebut menjadi potongan kecil agar lebih cepat terurai. Campurkan bahan organik tersebut dengan sedikit tanah dan air.</li>
-                  <li>Biarkan kompos terurai secara alami, dan dalam beberapa bulan, Anda akan memiliki kompos yang kaya akan nutrisi untuk tanaman.</li>
-              </ul>
-              <p class="underscore">Pupuk Cair</p>
-              <p>Campurkan sampah organik dengan air dalam wadah tertutup dan biarkan selama beberapa minggu. Saring campuran tersebut dan gunakan air hasil saringan sebagai pupuk cair untuk tanaman.</p>
+              <p class="underscore">Mengolah Sampah Menjadi Pupuk Kompos Cair</p>
+              <p>
+                Dengan mengolah sampah organik menjadi pupuk kompos cair, kita dapat mengurangi dampak negatif sampah terhadap lingkungan karena dengan menggunakan pupuk kompos cair dari sampah organik, kita tidak hanya mengurangi jumlah sampah di tempat pembuangan akhir, tetapi juga memanfaatkannya untuk menghasilkan sesuatu yang bernilai dan ramah lingkungan.
+              </p>
+              <p>
+                Penasaran dengan cara membuatnya? Yuk simak video di bawah ini
+              </p>
+              <div class="video-wraper">
+                <iframe src="https://www.youtube.com/embed/Cm8nn1mnX_Q"></iframe>
+              </div>
           </div>
         `;
   },

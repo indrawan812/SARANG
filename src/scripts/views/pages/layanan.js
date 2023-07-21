@@ -33,7 +33,7 @@ const Layanan = {
                 <div></div>
             </div>
             <p class="underscore">Sampah Organik</p>
-            <p>Bahan - bahan organik seperti rumput, daun, limbah dapur, atau sisa-sisa tanaman dapat digunakan untuk membuat pupuk kompos cair. Bahan organik ini dicincang halus, dicampurkan dengan air, dan difermentasi untuk menghasilkan pupuk yang kaya akan nutrisi.</p>
+            <p>Anda bisa menjual sampah organik yang sudah anda olah menjadi pupuk kompos cair pada kami</p>
         </div>
         <div id="container-form-exchange" class="container-form-exchange hide-content">
             <div class="form-exchange">

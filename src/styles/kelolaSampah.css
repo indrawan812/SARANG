@@ -33,6 +33,7 @@
 
 .info-kelolaSampah {
     padding: 100px 0px;
+
 }
 
 .info-kelolaSampah hr {
@@ -67,6 +68,19 @@
 .info-kelolaSampah .underscore {
     text-decoration: underline;
     font-weight: bold;
+}
+
+.video-wraper {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+iframe {
+    border: none;
+    width: 80%;
+    height: 500px;
 }
 
 @media (max-width: 768px) {
@@ -115,6 +129,10 @@
         font-size: 16px;
     }
 
+    iframe {
+        width: 80%;
+        height: 400px;
+    }
 }
 
 @media (max-width: 425px) {
@@ -182,5 +200,11 @@
     .info-kelolaSampah .underscore {
         text-decoration: underline;
         font-weight: bold;
+    }
+
+    iframe {
+        border: none;
+        width: 100%;
+        height: 300px;
     }
 }
